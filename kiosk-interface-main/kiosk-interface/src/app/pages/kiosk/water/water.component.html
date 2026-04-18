@@ -1,0 +1,51 @@
+<div class="kiosk-wrapper">
+
+  <div class="kiosk-card">
+
+    <!-- Title -->
+    <h1 class="title">💧 Water</h1>
+
+    <!-- Department Grid -->
+    <div class="dept-grid">
+
+      <button class="dept-card electricity"
+              (click)="paybill()">
+        <span class="icon">🧾</span>
+        <span class="label">Pay Water Tax</span>
+      </button>
+
+      
+
+      <button class="dept-card gas"
+              (click)="selectDepartment('gas')">
+        <span class="icon">🔎</span>
+        <span class="label">New Connection</span>
+      </button>
+
+      <button class="dept-card municipality"
+              (click)="selectDepartment('municipality')">
+        <span class="icon">✔️</span>
+        <span class="label">Check Status</span>
+      </button>
+
+      <button class="dept-card computer"
+              (click)="selectDepartment('computer')">
+        <span class="icon">❗</span>
+        <span class="label">Complaint</span>
+      </button>
+
+</div> </div> <div class="footer-actions">
+    <button class="nav-btn-small back-btn" (click)="goBack()">
+      <span class="label">Back</span>
+    </button>
+
+    <button class="nav-btn-small home-btn" (click)="goHome()">
+      <span class="label">Home</span>
+    </button>
+     
+
+    </div>
+
+  </div>
+
+

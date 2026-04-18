@@ -1,0 +1,67 @@
+
+<div class="kiosk-wrapper" *ngIf="pageData">
+  <div class="kiosk-card">
+     <ng-container *ngFor="let comp of pageData?.components">
+        <h1 *ngIf="comp.type === 'text' && comp.order === 1"
+              class="title">
+              {{ comp.text['text'] }}
+        </h1>
+      </ng-container>
+
+        <div class="dept-grid">
+
+        <ng-container *ngFor="let comp of pageData?.components">
+          <button class="dept-card {{comp.config['class']}}" 
+              (click)="selectDepartment(comp)" *ngIf="comp.type === 'button'">
+            <span class="icon">{{ comp.config['icon'] }}</span>
+            <span class="label">{{ comp.text['text'] }}</span>
+          </button>
+        </ng-container>
+
+
+        </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="kiosk-wrapper">
+
+  <div class="kiosk-card">
+    <h1 class="title">Select the Department</h1>
+    <div class="dept-grid">
+
+      <button class="dept-card electricity"
+              (click)="selectElectricity()">
+        <span class="icon">⚡</span>
+        <span class="label">ELECTRICITY</span>
+      </button>
+
+      <button class="dept-card water"
+              (click)="selectWater()">
+        <span class="icon">💧</span>
+        <span class="label">WATER</span>
+      </button>
+
+      <button class="dept-card gas"
+              (click)="selectGas()">
+        <span class="icon">🔥</span>
+        <span class="label">GAS</span>
+      </button>
+
+      <button class="dept-card municipality"
+              (click)="selectMunicipality()">
+        <span class="icon">🏠</span>
+        <span class="label">MUNICIPALITY</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</div> -->
